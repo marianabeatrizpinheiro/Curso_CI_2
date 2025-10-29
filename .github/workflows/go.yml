@@ -9,7 +9,7 @@ on:
 jobs:
 
   test:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
     env:
       HOST: localhost
       PORT: 5432
@@ -45,7 +45,7 @@ jobs:
   
   build:
     needs: test
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build
