@@ -14,8 +14,8 @@ jobs:
       HOST: localhost
       PORT: 5432
       USER: root
-      DBNAME: root
       PASSWORD: root
+      DBNAME: root
     strategy:
       matrix:
         os: ['ubuntu-latest', 'ubuntu-18.04']
@@ -37,6 +37,12 @@ jobs:
 
     - name: Test
       run: go test -v main_test.go 
+      
+    - name: Upload main compilado
+      uses: actions/upload-artifact@v5
+      with:
+        name: programa
+        path: main
       
   
   build:
