@@ -44,7 +44,7 @@ jobs:
         name: programa
         path: main
     - name: Download main compilado
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v6
       with:
         name: programa
       
