@@ -43,6 +43,10 @@ jobs:
       with:
         name: programa
         path: main
+    - name: Download main compilado
+      uses: actions/download-artifact@v3
+      with:
+        name: programa
       
   
   build:
