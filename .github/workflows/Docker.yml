@@ -18,4 +18,11 @@ jobs:
       with: 
         username: marianapinheiro0917 
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v6.18.0
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: marianapinheiro0917/testeci
       
